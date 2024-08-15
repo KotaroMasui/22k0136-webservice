@@ -1,0 +1,25 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>top</title>
+</head>
+
+<body>
+  <ul class="item-list">
+    <% for (const item of items) { %>
+      <li class="item-list"><%= item.name %> - <%= item.quantity %> 個</li>
+    <% } %>
+  </ul>
+  <label for="name">商品名:</label>
+  <input type="text" class="input-text" id="name" name="name" required />
+  <label for="quantity">個数:</label>
+  <input type="number" class="input-text" id="quantity" name="quantity" required />
+  <button class="send-button" type="submit">送信</button>
+  <script src="/static/index.js" defer></script>
+</body>
+
+</html>
